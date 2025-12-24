@@ -5,7 +5,7 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #0f172a;
+    background-color: #050505; /* full game-mode black */
     color: #e5e7eb;
 }
 
@@ -19,7 +19,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 80px;
-    background-color: #050505;
+    background: radial-gradient(circle at right, #120202, #050505);
     gap: 60px;
 }
 
@@ -28,7 +28,7 @@ body {
 }
 
 .hero-left h1 {
-    font-size: 54px;
+    font-size: 56px;
     margin-bottom: 10px;
     color: #ffffff;
 }
@@ -37,6 +37,7 @@ body {
     font-size: 18px;
     color: #ff3b3b;
     margin-bottom: 22px;
+    letter-spacing: 0.5px;
 }
 
 .hero-description {
@@ -64,7 +65,7 @@ body {
 
 .hero-buttons a:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.35);
+    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.4);
 }
 
 /* =========================
@@ -74,8 +75,8 @@ body {
 .hero-right img {
     width: 380px;
     max-width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75);
+    border-radius: 14px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8);
 }
 
 /* =========================
@@ -83,15 +84,16 @@ body {
    ========================= */
 
 #projects {
-    padding: 100px 20px;
+    padding: 120px 20px;
     background-color: #020617;
 }
 
 #projects h2 {
     text-align: center;
-    font-size: 34px;
-    margin-bottom: 60px;
+    font-size: 36px;
+    margin-bottom: 80px;
     letter-spacing: 1px;
+    color: #ffffff;
 }
 
 /* =========================
@@ -100,14 +102,15 @@ body {
 
 .project-category {
     max-width: 900px;
-    margin: 0 auto 80px auto;
+    margin: 0 auto 100px auto;
 }
 
 .project-category h3 {
     font-size: 26px;
-    margin-bottom: 30px;
-    color: #38bdf8;
-    text-align: left;
+    margin-bottom: 35px;
+    color: #ff3b3b; /* match hero red */
+    text-align: center; /* FIXED alignment issue */
+    letter-spacing: 0.5px;
 }
 
 /* =========================
@@ -116,32 +119,35 @@ body {
 
 .project-card {
     margin-bottom: 40px;
-    padding: 32px;
+    padding: 34px;
     background: linear-gradient(180deg, #020617, #020617);
     border: 1px solid #1e293b;
-    border-radius: 14px;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    border-radius: 16px;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-4px);
-    border-color: #38bdf8;
+    transform: translateY(-6px);
+    border-color: #ff3b3b;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
 .project-card h4 {
     font-size: 22px;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
+    color: #ffffff;
 }
 
 .project-card p {
     line-height: 1.7;
     margin-bottom: 12px;
+    color: #d1d5db;
 }
 
 .project-card .tech {
     font-size: 14px;
     color: #94a3b8;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 }
 
 /* =========================
@@ -155,8 +161,10 @@ body {
     color: #38bdf8;
     font-weight: bold;
     border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
 }
 
 .project-links a:hover {
     border-bottom: 1px solid #38bdf8;
+    color: #7dd3fc;
 }
